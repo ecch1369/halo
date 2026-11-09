@@ -1,0 +1,13 @@
+PackageIdentifier: ecch1369.HALO
+PackageVersion: 2.5.3
+InstallerType: nullsoft
+Scope: machine
+InstallerSwitches:
+  Silent: /S
+  SilentWithProgress: /S
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/ecch1369/halo/releases/download/v2.5.3/HALO-Setup.exe
+  InstallerSha256: REPLACE_WITH_SHA256_OF_HALO-Setup.exe
+ManifestType: installer
+ManifestVersion: 1.6.0
