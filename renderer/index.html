@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- HALO - made by hworks (ecchworks@gmail.com) -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HALO</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: file:; media-src 'self' file:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="glow"></div>
+<div id="island" class="s-idle">
+
+  <!-- compact pill -->
+  <div id="mini" class="view">
+    <div id="miniArt"></div>
+    <span id="miniTime" class="marq"></span>
+    <div class="eq"><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <!-- expanded player -->
+  <div id="player" class="view">
+    <div class="row top">
+      <div id="art" class="art"></div>
+      <div class="meta">
+        <div id="srcName" class="srcName"></div>
+        <div id="title" class="title marq"></div>
+        <div id="artist" class="artist marq"></div>
+      </div>
+      <div class="eq big"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="row prog">
+      <span id="tCur">0:00</span>
+      <input id="seek" type="range" min="0" max="1000" value="0">
+      <span id="tRem">-0:00</span>
+    </div>
+    <div class="row ctrl">
+      <button id="bTimer" title="Timer"></button>
+      <button id="bPrev" title="Previous"></button>
+      <button id="bPlay" title="Play / Pause" class="main"></button>
+      <button id="bNext" title="Next"></button>
+      <button id="bShuffle" title="Shuffle"></button>
+      <button id="bRepeat" title="Repeat"></button>
+      <button id="bList" title="Playlist"></button>
+      <button id="bPower" title="Turn off" class="pwr"></button>
+    </div>
+  </div>
+
+  <!-- playlist -->
+  <div id="playlist" class="view">
+    <div class="plHead">
+      <button id="plBack" title="Back"></button>
+      <span id="plCount">Playlist</span>
+      <span class="plBtns"><button id="plClear" class="txt">Clear all</button><button id="plEdit" class="txt">Edit</button></span>
+    </div>
+    <div id="plItems"></div>
+  </div>
+
+  <!-- timer -->
+  <div id="timerView" class="view">
+    <div class="tBig" id="tBig">05:00</div>
+    <div class="tBtns">
+      <button data-m="1" class="chip">1m</button>
+      <button data-m="5" class="chip">5m</button>
+      <button data-m="10" class="chip">10m</button>
+      <button data-m="25" class="chip">25m</button>
+      <button data-m="-1" class="chip">&minus;1m</button>
+      <button data-m="+1" class="chip">+1m</button>
+    </div>
+    <div class="tBtns">
+      <button id="tStart" class="chip go">Start</button>
+      <button id="tReset" class="chip">Reset</button>
+      <button id="tBack" class="chip">Back</button>
+    </div>
+  </div>
+
+  <!-- notification banner -->
+  <div id="notif" class="view">
+    <div id="nIcon" class="nIcon"></div>
+    <div class="nText">
+      <div class="nRow"><div id="nTitle" class="nTitle marq"></div><div id="nApp" class="nApp"></div></div>
+      <div id="nBody" class="nBody marq"></div>
+    </div>
+  </div>
+
+  <!-- drop hint -->
+  <div id="drop" class="view">Drop to add to playlist</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
