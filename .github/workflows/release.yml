@@ -1,0 +1,25 @@
+name: Release
+# Builds the Windows installer and attaches it to a GitHub Release (and publishes update info for auto-update).
+# Run it by publishing a release with a tag like v2.2.0, by pushing such a tag, or manually from the Actions tab.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - name: Build and publish
+        shell: bash
+        run: npx electron-builder --win nsis --publish always -c.publish.provider=github -c.publish.releaseType=release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
