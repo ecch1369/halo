@@ -1,0 +1,16 @@
+PackageIdentifier: ecch1369.HALO
+PackageVersion: 2.5.3
+PackageLocale: en-US
+Publisher: hworks
+PublisherUrl: https://github.com/ecch1369
+PackageName: HALO
+PackageUrl: https://github.com/ecch1369/halo
+License: Proprietary
+ShortDescription: A free Dynamic Island for Windows - media controls, notifications and a timer.
+Tags:
+- dynamic-island
+- media
+- notifications
+- widget
+ManifestType: defaultLocale
+ManifestVersion: 1.6.0
